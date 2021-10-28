@@ -153,6 +153,7 @@
     var active =false;
     var startTime=0;
     var period=0;
+    var a=0;
 
     
     // ボタンの初期設定
@@ -177,14 +178,20 @@
     
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
+      if (a==0){
         active=true;
-        startTime=new Date();
+        startTime=new Date;
+      }else{
+        a-=1;
+        active=true;
+      }
+    
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active=false;
-        
+        a+=1;
     }
 
     // ButtonCがクリックされた時の処理
